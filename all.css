@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: arial ;
+}
+body{
+    position: relative;
+}
+.name{
+    background: linear-gradient(to right, #ff523b, #ffad06);
+    color: #fff;
+    line-height: 50px;
+}
+#chk{
+    display: none;
+}
+
+label #menu, label #close{
+    position: absolute;
+    cursor: pointer;
+}
+label #menu{
+    right: 0px;
+    top: -10px;
+    font-size: 35px;
+    color: #fff;
+    transition: all .5s ;
+    line-height: 50px;
+}
+label #close{
+    color: #fff;
+    z-index: 1111;
+    right: 0px;
+    font-size: 30px;
+    top: -50px;
+    transition: all .5s ease;
+}
+#chk:checked ~ .nav-link{
+    margin-top: 0;
+}
+#chk:checked ~ label #menu{
+    right: 0px;
+    top: 30px;
+    opacity: 0;
+    pointer-events: none;
+}
+#chk:checked ~ label #close{
+    right: 0px;
+    top: -3px;
+}
+.nav-link{
+    background: linear-gradient(to right, #ff523b, #ffad06);
+    padding: 30px;
+    margin-top: -350px;
+    height: 200px;
+    transition: all .5s ease;
+}
+nav ul{
+    text-align: center;
+    padding-top: 10px;
+}
+nav ul li{
+    list-style: none;
+    padding-top: 10px;
+}
+.navbar .fa{
+    display: block;
+    color: #000;
+    font-size: 22px;
+    margin: 10px 25px;
+    cursor: pointer;
+    top: 0;
+}
+.side{
+    display: inline-block;
+    margin-top: 40px;
+    margin-right: 50px;
+    float: right;
+}
+.side .fa{
+    display: inline-block;
+    color: #fff;
+    right: 40px;
+    cursor: pointer;
+}
+.search-btn{
+    margin-top: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.search-btn input{
+    width: 100%;
+    height: 20px;
+    border-radius: 5px;
+}
+.search-btn .fa{
+    margin-left: -25px;
+    cursor: pointer;
+}
+.head{
+    display: flex;
+    place-content: center;
+    justify-content: space-evenly;
+}
+.head ul{
+    margin-top: 20px;
+}
+.head ul li{
+    display: inline-block;
+    padding-left: 5px;
+}
+.container{
+    overflow: hidden;
+    margin-top: 70px;
+}
+.head-con{
+    column-count: 2;
+    opacity: 0;
+    animation: fadeUp .8s forwards;
+    animation-delay: .5s;
+}
+.head-con h3{
+    margin-left: 10px;
+}
+.head-con select{
+    float: right;
+    margin-right: 10px;
+}
+.head-con1{
+    opacity: 0;
+    animation: fadeUp .8s forwards;
+    animation-delay: .5s;
+}
+.items{
+    display: flex;
+    flex-wrap: wrap;
+    place-items: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+.item{
+    height: 250px;
+    width: 170px;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    opacity: 0;
+    animation: slide .5s forwards;
+    animation-delay: 1s;
+    margin-top: 20px;
+}
+.item img{
+    width:  100%;
+    height: 170px;
+}
+.item h4{
+    padding-top: 10px;
+    background: transparent;
+    color: orange;
+}
+.descr{
+    opacity: 0;
+    animation: fadeDown .5s forwards;
+    animation-delay: 1s;
+}
+.descr a{
+    text-decoration: none;
+    color: #000;
+}
+.rate .fa{
+    color: orange;
+}
+.item:hover{
+    transform: scale(1.1);
+    transition: ease-in-out .5s;
+}
+.page{
+    place-items: center;
+    justify-content: center;
+}
+.pg-btn{
+    margin: 40px;
+    opacity: 0;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    animation: up .5s ease-in forwards;
+    animation-delay: .5s;
+}
+.pg-btn span{
+    display: inline-block;
+    border: 1px solid #ff523b;
+    border-radius: 5px;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+.pg-btn span:hover{
+    background: #ff523b;
+    color: #fff;
+}
+.footer{
+    background-color: #000;
+    color: gray;
+    column-count: 1;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.footer h3{
+    color: #fff;
+}
+
+@keyframes fadeUp{
+    0%{
+        transform: translateY(4rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slide{
+    0%{
+        transform: translateY(4rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeDown{
+    0%{
+        transform: translateY(-1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes up{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+@media (min-width: 1000px){
+    #chk, #menu, #close{
+        display: none;
+    }
+    .nav-link{
+        margin-top: -80px;
+        height: 20px;
+        display: block;
+        transition: all .5s ease;
+    }
+    .nav-link ul{
+        float: right;
+    }
+    .nav-link ul li{
+        display: inline-block;
+        padding-top: 10px 50px;
+        margin-left: 50px;
+    }
+}

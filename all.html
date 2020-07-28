@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>E-Shop</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="name">
+            <h2>Meridian </h2>
+        </div>
+        <hr>
+    
+
+        <input type="checkbox" name="" id="chk">
+            <label for="chk">
+                <i class="fa fa-bars" id="menu"></i>
+                <i class="fa fa-times" id="close"></i>
+            </label>
+       
+        <div class="nav-link">
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="side">
+            <i class="fa fa-user"></i>
+            <i class="fa fa-shopping-cart"></i>
+        </div>
+    </div>
+    <div class="search-btn">
+        <input type="text" name="search"  id="" placeholder="search for products, brands and categories">
+        <i class="fa fa-search"></i>
+    </div>
+
+    <div class="head">
+        <ul>
+            <li><a href="all.html">All</a></li>
+            <li><i class="fa fa-tshirt"></i>Shirts</li>
+            <li><i class="fa fa-jeans"></i>Trousers</li>
+            <li><i class="fa fa-wristwatch"></i>Wrist Watches</li>
+            <li><i class="fa fa-shoes"></i>Shoes</li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="head-con animate-top">
+            <h3>Featured Products </h3>
+            <select >
+                <a href="all.html"><option>All</option></a>
+                <option>Shirts</option>
+                <option>Trousers</option>
+                <option>Shoes</option>
+                <option>Wrist watches</option>
+            </select>
+        </div>
+
+        <div class="items">
+            <div class="item animate-left">
+                <img src="images/shirt1.jpg" alt="">
+                <div class="descr">
+                    <a href="#">Item Name</a>
+                    <div class="rate">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>N 1,200</p>
+                    
+                </div>
+            </div>
+            <div class="item animate-right">
+                <img src="images/trouser1.jpg" alt="">
+                <div class="descr">
+                    <a href="#">Item Name</a>
+                    <div class="rate">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>N 1,200</p>
+                </div>
+            </div>
+            <div class="item animate-left">
+                <img src="images/watch3.jpg" alt="">
+                <div class="descr">
+                    <a href="#">Item Name</a>
+                    <div class="rate">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>N 1,200</p>
+                </div>
+            </div>
+            <div class="item animate-right">
+                <img src="images/chelsea6.jpg" alt="">
+                <div class="descr">
+                    <a href="#">Item Name</a>
+                    <div class="rate">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>N 1,200</p>
+                </div>
+            </div>
+            <div class="item animate-right">
+                <img src="images/sneakers3.jpg" alt="">
+                <div class="descr">
+                    <a href="#">Item Name</a>
+                    <div class="rate">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>N 1,200</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="page animate-left">
+        <div class="pg-btn">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>&#8594;</span>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="sub-foot animate-top">
+            <h3>Meridian</h3>
+            <div class="address">
+                <p>10, East Wing, <br>
+                Victoria Island, <br>
+                Lagos, Nigeria.
+                </p>
+            </div>
+        </div>
+        <div class="social animate-bottom">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-whatsapp"></i>
+        </div>
+        <br>
+        <hr>
+        <div class="copy animate-bottom">
+            <p>Copyright - Jekon 2020</p>
+        </div>
+    </div>
+
+
+    <script>
+        const selectElement = function(element){
+            return document.querySelector(element);
+        };
+        let menuToggler = selectElement(".menu");
+        let body = selectElement("nav-link")
+
+        menuToggler.addEventListener('click', function(){
+            body.classList.toggle('open')
+        })
+    </script>
+    <script>
+        window.sr = ScrollReveal();
+
+        sr.reveal('.animate-left', {
+            origin: 'left',
+            duration: 1000,
+            distance:'25rem',
+            delay:300
+        });
+
+        sr.reveal('.animate-right', {
+            origin: 'right',
+            duration: 1000,
+            distance:'25rem',
+            delay:600
+        });
+        
+        sr.reveal('.animate-top', {
+            origin: 'top',
+            duration: 1000,
+            distance:'25rem',
+            delay:600
+        });
+
+        sr.reveal('.animate-bottom', {
+            origin: 'bottom',
+            duration: 1000,
+            distance:'25rem',
+            delay:600
+        });
+    </script>
+
+    <script>
+    var indexValue = 1;
+        showImg(indexValue);
+        function btn_slide(e){showImg(indexValue = e);}
+        function side_slide(e){showImg(indexValue += e);}
+        function showImg(e){
+            var i;
+            const img = document.querySelectorAll('pic');
+            const sliders = document.querySelectorAll('.btn-sliders span');
+            if(e > pic.length){indexValue = 1}
+            if(e < 1){indexValue = pic.length}
+            for(i = 0; i < pic.length; i++){
+                pic[i].style.display = "none";
+            }
+            for(i = 0; i < sliders.length; i++){
+                sliders[i].style.background = "rgba(0, 0, 0, 0.5)";
+            }
+            pic[indexValue-1].style.display = "block";
+            sliders[indexValue-1].style.background = "white";
+        }
+    </script>
+    <script>
+        var indexValue = 0;
+        
+        function slideshow(){
+            setTimeout(slideshow, 4000);
+            var i;
+            const img = document.querySelectorAll("pic");
+            for(i = 0; i < pic.length; i++){
+                pic[i].style.display = "none";
+            }
+            indexValue++;
+            if(indexValue > pic.length){indexValue = 1}
+            pic[indexValue -1].style.display ="block";
+        }
+        slideshow();
+        
+    </script>
+
+</body>
+</html>
